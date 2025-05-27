@@ -1,58 +1,199 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Verde Essencial</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f9f4;
-      color: #2d3e2f;
-    }
-
-    header {
-      background-color: #2e7d32;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    main {
-      padding: 40px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    h1 {
-      margin: 0;
-    }
-
-    section {
-      background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      margin-top: 20px;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Marca de Roupa XYZ</title>
+    <style>
+        /* Estilos básicos para o site */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        header {
+            background-color: #111;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background-image: url('imagens/hero-fashion.jpg'); /* Imagem de destaque da marca */
+            background-size: cover;
+            background-position: center;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 1px 1px 5px black;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        section {
+            padding: 50px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            margin-bottom: 30px;
+            border-bottom: 3px solid #222;
+            padding-bottom: 10px;
+        }
+        .colecao {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .produto {
+            flex: 1 1 300px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            background-color: #fff;
+        }
+        .produto:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        .produto img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .produto-info {
+            padding: 15px;
+        }
+        .produto-info h3 {
+            margin: 0 0 10px;
+        }
+        .produto-info p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 25px 40px;
+        }
+        .redes-sociais a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.4rem;
+            text-decoration: none;
+        }
+        .redes-sociais a:hover {
+            color: #f39c12;
+        }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .colecao {
+                flex-direction: column;
+                align-items: center;
+            }
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav a {
+                margin: 10px 15px 0 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Verde Essencial</h1>
-  </header>
-  <main>
-    <section>
-      <h2>Bem-vindo</h2>
-      <p>Este é um projeto dedicado à sustentabilidade e ao futuro verde. Obrigado por nos visitares!</p>
+    <header>
+        <h1>Marca XYZ</h1>
+        <nav>
+            <a href="#colecao">Coleção</a>
+            <a href="#sobre">Sobre Nós</a>
+            <a href="#contactos">Contactos</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        Estilo que Transforma | Nova Coleção 2025
+    </div>
+
+    <section id="colecao">
+        <h2>Coleção Destaque</h2>
+        <div class="colecao">
+            <div class="produto">
+                <img src="imagens/camisa-azul.jpg" alt="Camisa Azul" />
+                <div class="produto-info">
+                    <h3>Camisa Azul Clássica</h3>
+                    <p>Confeccionada em algodão 100%, perfeita para ocasiões formais e casuais.</p>
+                </div>
+            </div>
+            <div class="produto">
+                <img src="imagens/vestido-vermelho.jpg" alt="Vestido Vermelho" />
+                <div class="produto-info">
+                    <h3>Vestido Vermelho Elegante</h3>
+                    <p>Design moderno e sofisticado, ideal para eventos especiais.</p>
+                </div>
+            </div>
+            <div class="produto">
+                <img src="imagens/casaco-preto.jpg" alt="Casaco Preto" />
+                <div class="produto-info">
+                    <h3>Casaco Preto Premium</h3>
+                    <p>Material de alta qualidade que oferece conforto e estilo.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section>
-      <h2>Sobre Nós</h2>
-      <p>Trabalhamos para promover práticas ecológicas no dia a dia, com foco em energia limpa, reciclagem e educação ambiental.</p>
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>
+            Fundada em 2010, a Marca XYZ tem como missão proporcionar peças de roupa que unem conforto, design contemporâneo e sustentabilidade. 
+            Utilizamos materiais ecológicos e processos éticos, garantindo qualidade e respeito pelo meio ambiente.
+        </p>
+        <p>
+            A nossa equipa de designers e artesãos trabalha diariamente para criar coleções exclusivas que acompanham as tendências globais, 
+            sem esquecer a autenticidade e a personalidade dos nossos clientes.
+        </p>
+        <img src="imagens/equipa.jpg" alt="Equipa Marca XYZ" style="width:100%;max-width:700px;margin-top:20px;border-radius:10px;">
     </section>
-  </main>
+
+    <section id="contactos">
+        <h2>Contactos</h2>
+        <p>Estamos disponíveis para esclarecer dúvidas e receber o seu feedback.</p>
+        <ul>
+            <li>Email: contacto@marcaxyz.com</li>
+            <li>Telefone: +351 912 345 678</li>
+            <li>Morada: Rua da Moda, 123, Porto, Portugal</li>
+        </ul>
+
+        <div class="redes-sociais">
+            <a href="#" aria-label="Instagram"><img src="imagens/instagram-icon.png" alt="Instagram" style="width:24px;"></a>
+            <a href="#" aria-label="Facebook"><img src="imagens/facebook-icon.png" alt="Facebook" style="width:24px;"></a>
+            <a href="#" aria-label="Twitter"><img src="imagens/twitter-icon.png" alt="Twitter" style="width:24px;"></a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Marca XYZ. Todos os direitos reservados.
+    </footer>
 </body>
 </html>
